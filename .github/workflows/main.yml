@@ -18,5 +18,5 @@ jobs:
           cp "source.js" "bookmark.js"
           
     - uses: stefanzweifel/git-auto-commit-action@v4
-      with:
-        github_token: ${{ secrets.IDM2BIBLATEX_SECRET }}
+      #with:
+      #  github_token: ${{ secrets.IDM2BIBLATEX_SECRET }}
