@@ -20,7 +20,7 @@ jobs:
         
     - name: Search and replace newlines
       run: |
-        tr -d '\n' < bookmark.js > bookmark.js
+        tr -d '\n' < source.js > bookmark.js
         
     - name: Commit
       uses: stefanzweifel/git-auto-commit-action@v4
