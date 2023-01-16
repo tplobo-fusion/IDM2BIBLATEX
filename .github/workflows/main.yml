@@ -14,11 +14,11 @@ jobs:
     - name: Checkout
       uses: actions/checkout@master
     
-    - name: Copy source
+    - name: Create bookmark file by copying source
       run: |
           cp "source.js" "bookmark.js"
         
-    - name: Search and replace newlines
+    - name: Search and replace newlines, place output in bookmark
       run: |
         tr -d '\n' < source.js > bookmark.js
         
@@ -26,7 +26,3 @@ jobs:
       uses: stefanzweifel/git-auto-commit-action@v4
       with:
         commit_message: Copy `source.js`
-
-    
-
-    
