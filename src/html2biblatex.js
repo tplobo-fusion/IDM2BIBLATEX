@@ -30,7 +30,8 @@
   }
 
   const title = document.title;
-  const url = document.URL;
+  const url = document.URL.replace('default.aspx', '');
+  const number = url.replace('https://idm.euro-fusion.org/?uid=', '');
 
   // get author if meta tag exists:
   const author_tag = document.querySelector("[name=author]");
@@ -49,9 +50,9 @@
 
   const pageTime = new Date(
     publishedTime ||
-      someTimeTag ||
-      someTimeTagWithoutDatetime ||
-      lastModifiedTime
+    someTimeTag ||
+    someTimeTagWithoutDatetime ||
+    lastModifiedTime
   );
   const date = jsDate2bibTex(pageTime);
   const year = date2YearTex(pageTime);
@@ -60,9 +61,9 @@
   let title_key = title.replace(/[^0-9a-z]/gi, "");
 
   // create citation key:
-  const citationKey = `${title_key}-${date}`;
+  const citationKey = `TBD`;
 
-  const type = "@Online";
+  const type = "@techreport";
   const filename = `:./references/${window.location.pathname
     .slice(1)
     .replace(/\//g, "-")}.html:html`;
@@ -80,12 +81,12 @@
   // generate BiBTeX entry:
   const bibTexEntry = `${type} {${citationKey},\r\
 \ \ title = {${title_tex}},\r\
-\ \ date = {${date}},\r\
-\ \ year = {${year}},\r\
 ${author ? `\ \ author = {${author}},\r` : ""}\
+\ \ number = {${number}},\r\
 \ \ file = {${filename}},\r\
+\ \ institution = {{EUROfusion}},\r\
 \ \ url = {${url}},\r\
-\ \ urldate = {${urldate}}\r\
+\ \ Accessed = {${urldate}}\r\
 }`;
 
   copyToClipboard(bibTexEntry);
