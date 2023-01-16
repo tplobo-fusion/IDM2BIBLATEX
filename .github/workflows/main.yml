@@ -10,7 +10,7 @@ jobs:
     - name: copy file
       uses: canastro/copy-file-action@master
       with:
-        source: "./source.js"
-        target: "./bookmark2.js"
+        source: "source.js"
+        target: "bookmark2.js"
 
 
