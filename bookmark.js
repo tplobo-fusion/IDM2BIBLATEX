@@ -69,6 +69,6 @@ javascript: "use strict"; (
     };
     function text2latex(t) { return t.replace(/./g, c => mapping[c] || c) }
 
-    var bibTexEntry = type + " {" + citationKey + ",\n  title = {" + text2latex(title_tex) + "},\n " + (author ? "  author = {" + author + "},\n" : "") + " ,\n number = {" + number + "},\n  institution = {{EUROfusion}},\n  url = {" + url + "},\n  Accessed = {" + urldate + "}\n}"; copyToClipboard(bibTexEntry)
+    var bibTexEntry = type + " {" + citationKey + ",  title = {" + text2latex(title_tex) + "},\n " + (author ? "  author = {" + author + "},\n" : "") + " ,\n number = {" + number + "},\n  institution = {{EUROfusion}},\n  url = {" + url + "},\n  Accessed = {" + urldate + "}\n}"; copyToClipboard(bibTexEntry)
 
   })();
