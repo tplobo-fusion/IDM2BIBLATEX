@@ -12,9 +12,7 @@ jobs:
     - uses: actions/checkout@master
     - name: Copy source
       run: |
-          sourcefile= `source.js`
-          targetfile= `bookmark2.js`
-          cp "$sourcefile" "$targetfile"
+          cp "source.js" "bookmark2.js"
     - name: Commit files
       run: |
         git config --local user.email "action@github.com"
