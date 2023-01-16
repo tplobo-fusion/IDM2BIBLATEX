@@ -10,7 +10,16 @@ jobs:
     - name: copy file
       uses: canastro/copy-file-action@master
       with:
-        source: "source.js"
-        target: "bookmark.js"
+        source: "./source.js"
+        target: "./bookmark.js"
 
-
+  search_replace:
+    name: Search & Replace
+    runs-on: ubuntu-latest
+    steps:
+    - uses: ./
+    - name: search and replace
+      with:
+        include: "./bookmark.js"
+        search: '\n'
+        replace: ''
