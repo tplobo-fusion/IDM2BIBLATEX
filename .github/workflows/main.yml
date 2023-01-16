@@ -20,11 +20,13 @@ jobs:
           cp "source.js" "bookmark.js"
         
     - name: Search and replace
-      uses: jafin/gha-search-replace@0.2-alpha
-      with:
-        include: bookmark.js
-        search: 'a'
-        replace: 'AAAAAAAAAA'
+      run: |
+        sed -i 's/a/AAAAAAA/g' bookmark.js
+      #uses: jafin/gha-search-replace@0.2-alpha
+      #with:
+      #  include: bookmark.js
+      #  search: 'a'
+      #  replace: 'AAAAAAAAAA'
         
     - name: Commit
       uses: stefanzweifel/git-auto-commit-action@v4
