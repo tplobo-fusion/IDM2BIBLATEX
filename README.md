@@ -1,13 +1,12 @@
-html2biblatex
+IDM2BIBLATEX
 =============
 
 > Citing a webpage in LaTeX has never been easier!
 
-html2biblatex is a lightweight bookmarklet for exporting web pages to BibLaTeX.
+IDM2BIBLATEX is a lightweight bookmarklet for exporting EUROfusion IDM web pages to BibLaTeX.
+Based on the more general repository [html2biblatex](https://github.com/dmstern/html2biblatex).
 
-_small - flexible - magic!_
-
-Just click on the html2biblatex bookmark button and paste the collected content into your BibLaTeX code.
+Just click on the IDM2BIBLATEX bookmark button and paste the collected content into your BibLaTeX code.
 
 ![Screenshot of popup window to copy the biblatex entry](./screenshot-bookmark.png "html2biblatex Screenshot")
 
@@ -19,7 +18,7 @@ Installation
 ------------
 
  1. Create a new bookmark in the bookmark panel of your browser.
- 2. Name it ("🌐 ➜ 📚" or whatever).
+ 2. Name it (_e.g._ "🌐 ➜ 📚").
  3. URL: [Paste here the content from the file [dist/bookmark-url.js](dist/bookmark-url.js)]
 
 Usage
@@ -46,11 +45,11 @@ Usage
 }
 ```
 
-Tested with Google Chrome and Epiphany (GNOME) under Ubuntu 13.10.
+Tested with Mozilla Firefox 108.0.2 under macOS Ventura 13.1.
 
 --------------------------------------------------------
 
-If you like this tool, please consider to upvote my answer on tex.stackexchange.com: https://tex.stackexchange.com/a/170689/48366
+If you like this tool, please consider to upvote @dmstern 's original answer on tex.stackexchange.com: https://tex.stackexchange.com/a/170689/48366
 
 --------------------------------------------------------
 
