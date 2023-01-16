@@ -8,10 +8,6 @@ Based on the more general repository [html2biblatex](https://github.com/dmstern/
 
 Just click on the IDM2BIBLATEX bookmark button and paste the collected content into your BibLaTeX code.
 
-![Screenshot of popup window to copy the biblatex entry](./screenshot-bookmark.png "html2biblatex Screenshot")
-
-![Screenshot of popup window to copy the biblatex entry](./screenshot-copy.png "html2biblatex Screenshot")
-
 --------------------------------------------------------
 
 Installation
@@ -35,13 +31,13 @@ Usage
 **Sample output:**
 
 ```BibLaTeX
-@Online {UsingBibTeXashortguide-2015-11-02,
- title = {Using BibTeX: a short guide},
- date = {2015-11-02},
- author = {Martin J. Osborne},
- file = {:./references/osborne-latex-BIBTEX.HTM.html:html},
- url = {https://www.economics.utoronto.ca/osborne/latex/BIBTEX.HTM},
- urldate = {2018-03-17}
+@techreport {TBD,  
+  title = {EFDA\_D\_XXXXXX - BB-S.0X.0X-T00X-D0XX: TITLE},  
+  , 
+  number = {XXXXXX},  
+  institution = {{EUROfusion}},  
+  url = {https://idm.euro-fusion.org/?uid=XXXXXX},  
+  Accessed = {2023-01-16}
 }
 ```
 
