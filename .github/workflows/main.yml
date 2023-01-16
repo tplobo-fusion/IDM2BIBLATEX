@@ -15,14 +15,17 @@ jobs:
       uses: actions/checkout@master
     
     - name: Create bookmark file by copying source
+      # https://stackoverflow.com/questions/62432172/github-action-to-copy-and-a-rename-a-file
       run: |
           cp "source.js" "bookmark.js"
         
     - name: Search and replace newlines, place output in bookmark
+      # https://stackoverflow.com/questions/1251999/how-can-i-replace-each-newline-n-with-a-space-using-sed/1252010#1252010
       run: |
         tr -d '\n' < source.js > bookmark.js
         
     - name: Commit
+      # https://github.com/stefanzweifel/git-auto-commit-action
       uses: stefanzweifel/git-auto-commit-action@v4
       with:
-        commit_message: Copy `source.js`
+        commit_message: "GitHub Action: build `bookmark.js`"
