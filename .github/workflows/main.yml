@@ -1,14 +1,26 @@
-name: copy files
-on: [push]
-jobs:
+name: docs
+on:
+  push:
+    branches: [ master ]
+    #paths: 'myfolder/*/README.md'
 
-  build:
-    name: Build
+jobs:
+  docit:
     runs-on: ubuntu-latest
+
     steps:
     - uses: actions/checkout@master
-    - name: copy file
-      uses: canastro/copy-file-action@master
+    - name: Copy source
+      run: |
+          sourcefile= `source.js`
+          targetfile= `bookmark2.js`
+          cp "$sourcefile" "$targetfile"
+    - name: Commit files
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git commit -m "Add changes" -a
+    - name: Push changes
+      uses: ad-m/github-push-action@master
       with:
-        source: "source.js"
-        target: "bookmark2.js"
+        github_token: ${{ secrets.GITHUB_TOKEN }}
