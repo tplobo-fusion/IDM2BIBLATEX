@@ -1,13 +1,14 @@
-name: create bookmark file
+name: copy files
 on: [push]
 jobs:
 
-  copy:
-    name: Copy
+  build:
+    name: Build
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
-    - uses: liquibase-github-actions/init-copy@v4.18.0
+    - uses: actions/checkout@master
+    - name: copy file
+      uses: canastro/copy-file-action@master
       with:
-        source: "source.js"       # Source directory where the project files will be copied from string
-        target: "bookmark2.js"    # Path to the directory where the project files will be created string
+        source: "source.js"
+        target: "bookmark2.js"
