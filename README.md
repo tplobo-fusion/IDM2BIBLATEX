@@ -52,14 +52,3 @@ Tested with Mozilla Firefox 108.0.2 under macOS Ventura 13.1.
 If you like this tool, please consider to upvote [@dmstern](https://github.com/dmstern)'s original answer on tex.stackexchange.com: https://tex.stackexchange.com/a/170689/48366
 
 --------------------------------------------------------
-
-Build (for developers)
-----------------------
-
-1. Install [Node.js](https://nodejs.org/)
-2. In a terminal run
-
-  ```bash
-  npm install
-  npm run build
-  ```
