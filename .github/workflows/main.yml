@@ -1,4 +1,4 @@
-name: docs
+name: Build bookmark.js
 
 on:
   push:
@@ -7,17 +7,30 @@ on:
 
 jobs:
 
-  copy_source:
+  build_bookmark:
     runs-on: ubuntu-latest
 
     steps:
     
-    - uses: actions/checkout@master
+    - name: Checkout
+      uses: actions/checkout@master
+    
     - name: Copy source
       run: |
           cp "source.js" "bookmark.js"
-          
-    - uses: stefanzweifel/git-auto-commit-action@v4
+        
+    - name: Search and replace
+      uses: jafin/gha-search-replace@0.2-alpha
+      with:
+        include: bookmark.js
+        search: '\n'
+        replace: ''
+        
+    - name: Commit
+      uses: stefanzweifel/git-auto-commit-action@v4
       with:
         commit_message: Copy `source.js`
-      #  github_token: ${{ secrets.IDM2BIBLATEX_SECRET }}
+
+    
+
+    
