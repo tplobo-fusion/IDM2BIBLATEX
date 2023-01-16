@@ -99,14 +99,22 @@
   }
 
   // generate BiBTeX entry:
-  const bibTexEntry = `${type} {${citationKey},\r\
-\ \ title = {${text2latex(title_tex)}},\r\
-${author ? `\ \ author = {${author}},\r` : ""}\
-\ \ number = {${number}},\r\
-\ \ institution = {{EUROfusion}},\r\
-\ \ url = {${url}},\r\
-\ \ Accessed = {${urldate}}\r\
-}`;
+  const bibTexEntry = `${type} {${citationKey},\n\
+    \ \ title = {${text2latex(title_tex)}},\n\
+    ${author ? `\ \ author = {${author}},\n` : ""}\
+    \ \ number = {${number}},\n\
+    \ \ institution = {{EUROfusion}},\n\
+    \ \ url = {${url}},\n\
+    \ \ Accessed = {${urldate}}\n\
+  }`;
+  //const bibTexEntry = `${type} {${citationKey},\r\
+  //  \ \ title = {${text2latex(title_tex)}},\r\
+  //  ${author ? `\ \ author = {${author}},\r` : ""}\
+  //  \ \ number = {${number}},\r\
+  //  \ \ institution = {{EUROfusion}},\r\
+  //  \ \ url = {${url}},\r\
+  //  \ \ Accessed = {${urldate}}\r\
+  //}`;
 
   copyToClipboard(bibTexEntry);
 })();
