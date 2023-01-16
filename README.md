@@ -1,8 +1,6 @@
 IDM2BIBLATEX
 =============
 
-> Citing a webpage in LaTeX has never been easier!
-
 IDM2BIBLATEX is a lightweight bookmarklet for exporting EUROfusion IDM web pages to BibLaTeX.
 Based on the more general repository [html2biblatex](https://github.com/dmstern/html2biblatex).
 
@@ -40,8 +38,16 @@ Usage
   Accessed = {2023-01-16}
 }
 ```
-
 Tested with Mozilla Firefox 108.0.2 under macOS Ventura 13.1.
+
+Modifications
+-------------
+
+Implement modifications in `source.js`.
+Copy the contents to `bookmark.js`. Do a search & replace to remove all newlines.
+Install the new bookmark.
+
+
 
 --------------------------------------------------------
 
