@@ -103,7 +103,6 @@
 \ \ title = {${text2latex(title_tex)}},\r\
 ${author ? `\ \ author = {${author}},\r` : ""}\
 \ \ number = {${number}},\r\
-\ \ file = {${filename}},\r\
 \ \ institution = {{EUROfusion}},\r\
 \ \ url = {${url}},\r\
 \ \ Accessed = {${urldate}}\r\
