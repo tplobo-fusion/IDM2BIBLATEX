@@ -78,9 +78,29 @@
     .replace(/\u00dc/g, '\\"U')
     .replace(/\u00DF/g, '\\"s');
 
+  // Replace symbols by their backslash-escaped versions
+  const mapping = {
+    '#': '\\#',
+    '$': '\\$',
+    '%': '\\%',
+    '&': '\\&',
+    '/': '\\slash',
+    '<': '$<$',
+    '>': '$>$',
+    '\\': '\\textbackslash',
+    '^': '\\^',
+    _: '\\_',
+    '{': '\\{',
+    '}': '\\}',
+    '~': '\\textasciitilde'
+  };
+  function text2latex(t) {
+    return t.replace(/./g, c => mapping[c] || c)
+  }
+
   // generate BiBTeX entry:
   const bibTexEntry = `${type} {${citationKey},\r\
-\ \ title = {${title_tex}},\r\
+\ \ title = {${text2latex(title_tex)}},\r\
 ${author ? `\ \ author = {${author}},\r` : ""}\
 \ \ number = {${number}},\r\
 \ \ file = {${filename}},\r\
