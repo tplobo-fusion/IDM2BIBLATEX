@@ -43,9 +43,12 @@ Tested with Mozilla Firefox 108.0.2 under macOS Ventura 13.1.
 Modifications
 -------------
 
-Implement modifications in `source.js`.
-Copy the contents to `bookmark.js`. Do a search & replace to remove all newlines.
-Install the new bookmark.
+Implement modifications in `source.js`. Modifications to `bookmark.js` are ignored.
+
+New contents in `source.js` are copied to `bookmark.js` by a GitHub Action.
+The action also does a search & replace to remove all newlines.
+
+Install the new bookmark in your browser.
 
 
 

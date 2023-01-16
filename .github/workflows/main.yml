@@ -3,7 +3,6 @@ name: Build bookmark.js
 on:
   push:
     branches: [ master ]
-    #paths: 'myfolder/*/README.md'
 
 jobs:
 
@@ -21,12 +20,7 @@ jobs:
         
     - name: Search and replace newlines
       run: |
-        sed -i ':a;N;$!ba;s/\n/ /g' bookmark.js
-      #uses: jafin/gha-search-replace@0.2-alpha
-      #with:
-      #  include: bookmark.js
-      #  search: 'a'
-      #  replace: 'AAAAAAAAAA'
+        tr '\n' '' < bookmark.js
         
     - name: Commit
       uses: stefanzweifel/git-auto-commit-action@v4
