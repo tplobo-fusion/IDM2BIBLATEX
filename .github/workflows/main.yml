@@ -19,9 +19,9 @@ jobs:
       run: |
           cp "source.js" "bookmark.js"
         
-    - name: Search and replace
+    - name: Search and replace newlines
       run: |
-        sed -i 's/a/AAAAAAA/g' bookmark.js
+        sed -i ':a;N;$!ba;s/\n/ /g' bookmark.js
       #uses: jafin/gha-search-replace@0.2-alpha
       #with:
       #  include: bookmark.js
