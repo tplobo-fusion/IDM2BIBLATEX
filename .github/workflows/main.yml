@@ -23,8 +23,8 @@ jobs:
       uses: jafin/gha-search-replace@0.2-alpha
       with:
         include: bookmark.js
-        search: '\n'
-        replace: ''
+        search: 'a'
+        replace: 'AAAAAAAAAA'
         
     - name: Commit
       uses: stefanzweifel/git-auto-commit-action@v4
