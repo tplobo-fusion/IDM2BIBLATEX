@@ -38,7 +38,10 @@ Usage
   Accessed = {2023-01-16}
 }
 ```
-Tested with Mozilla Firefox 108.0.2 under macOS Ventura 13.1.
+Tested with with all versions and macOS between:
+- Mozilla Firefox 108.0.2 under macOS Ventura 13.1.
+- ...
+- Mozilla Firefox 136.0 under macOS Ventura 15.3.1.
 
 Modifications
 -------------
